@@ -1,0 +1,45 @@
+[debug] [2025-05-16T17:42:42.583Z] ----------------------------------------------------------------------
+[debug] [2025-05-16T17:42:42.591Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\santo\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js init
+[debug] [2025-05-16T17:42:42.592Z] CLI Version:   14.4.0
+[debug] [2025-05-16T17:42:42.593Z] Platform:      win32
+[debug] [2025-05-16T17:42:42.593Z] Node Version:  v22.13.0
+[debug] [2025-05-16T17:42:42.594Z] Time:          Fri May 16 2025 23:12:42 GMT+0530 (India Standard Time)
+[debug] [2025-05-16T17:42:42.594Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2025-05-16T17:42:42.951Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2025-05-16T17:42:42.952Z] > authorizing via signed-in user (sayyadvasim394@gmail.com)
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  C:\Users\santo\Desktop\ai-mock-interview-react-vite-typescript-january-2025
+
+Before we get started, keep in mind:
+
+  * You are initializing within an existing Firebase project directory
+
+[info] 
+=== Project Setup
+[info] 
+[info] First, let's associate this project directory with a Firebase project.
+[info] You can create multiple project aliases by running firebase use --add, 
+[info] but for now we'll just set up a default project.
+[info] 
+[debug] [2025-05-16T17:42:51.200Z] Using project from CLI flag: ai-mock-interview-yt-react-ts
+[debug] [2025-05-16T17:42:51.202Z] Checked if tokens are valid: true, expires at: 1747420525791
+[debug] [2025-05-16T17:42:51.203Z] Checked if tokens are valid: true, expires at: 1747420525791
+[debug] [2025-05-16T17:42:51.205Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/ai-mock-interview-yt-react-ts [none]
+[debug] [2025-05-16T17:42:52.349Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/ai-mock-interview-yt-react-ts 403
+[debug] [2025-05-16T17:42:52.349Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/ai-mock-interview-yt-react-ts {"error":{"code":403,"message":"The caller does not have permission","status":"PERMISSION_DENIED"}}
+[debug] [2025-05-16T17:42:52.352Z] Request to https://firebase.googleapis.com/v1beta1/projects/ai-mock-interview-yt-react-ts had HTTP Error: 403, The caller does not have permission
+[debug] [2025-05-16T17:42:52.745Z] FirebaseError: Request to https://firebase.googleapis.com/v1beta1/projects/ai-mock-interview-yt-react-ts had HTTP Error: 403, The caller does not have permission
+    at responseToError (C:\Users\santo\AppData\Roaming\npm\node_modules\firebase-tools\lib\responseToError.js:52:12)
+    at RetryOperation._fn (C:\Users\santo\AppData\Roaming\npm\node_modules\firebase-tools\lib\apiv2.js:312:77)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+[error] 
+[error] Error: Failed to get Firebase project ai-mock-interview-yt-react-ts. Please make sure the project exists and your account has permission to access it.

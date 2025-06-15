@@ -1,48 +1,54 @@
-# AI-Mock-Interview-Web-App-
-# 👋 Hi there, I'm Vasim Sayyed!
+# React + TypeScript + Vite
 
-🎓 B.Tech Computer Engineering Student at Shreeyash College of Engineering  
-💻 Full Stack Java Developer | Tech Enthusiast | Problem Solver
+This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
----
+Currently, two official plugins are available:
 
-## 🛠️ Tech Stack
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
-- **Languages:** Java, C++, JavaScript, HTML, CSS  
-- **Frontend:** React.js, Bootstrap  
-- **Backend:** Spring Boot, Servlets, JDBC  
-- **Database:** Firebase, MySQL  
-- **Tools:** Git, GitHub, Postman  
-- **Concepts:** OOP, REST APIs, Microservices, File I/O
+## Expanding the ESLint configuration
 
----
+If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
 
-## 💼 Projects
+```js
+export default tseslint.config({
+  extends: [
+    // Remove ...tseslint.configs.recommended and replace with this
+    ...tseslint.configs.recommendedTypeChecked,
+    // Alternatively, use this for stricter rules
+    ...tseslint.configs.strictTypeChecked,
+    // Optionally, add this for stylistic rules
+    ...tseslint.configs.stylisticTypeChecked,
+  ],
+  languageOptions: {
+    // other options...
+    parserOptions: {
+      project: ['./tsconfig.node.json', './tsconfig.app.json'],
+      tsconfigRootDir: import.meta.dirname,
+    },
+  },
+})
+```
 
-### 🚀 [AI Mock Interview Web App](#)
-A React-based web application that simulates a real-world interview experience using dynamic Q&A components and Firebase backend.
+You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
 
-### 📊 [Insurance Premium Predictor](#)
-A mini web app built using Python and Logistic Regression to predict insurance costs based on user inputs.
+```js
+// eslint.config.js
+import reactX from 'eslint-plugin-react-x'
+import reactDom from 'eslint-plugin-react-dom'
 
----
-
-## 📈 Currently Learning
-
-- Advanced Spring Boot & REST APIs  
-- Data Structures & Algorithms (DSA)  
-- System Design & Scalable Architecture  
-- Solving challenges on LeetCode
-
----
-
-## 📫 Let's Connect
-
-- 💼 [LinkedIn](https://www.linkedin.com/in/vasimsayyed)  
-- 💻 [GitHub](https://github.com/vasimsayyed)  
-- 📬 Email: sayyadvasim394@gmail.com
-
----
-
-> “Code is like humor. When you have to explain it, it’s bad.” – Cory House
-
+export default tseslint.config({
+  plugins: {
+    // Add the react-x and react-dom plugins
+    'react-x': reactX,
+    'react-dom': reactDom,
+  },
+  rules: {
+    // other rules...
+    // Enable its recommended typescript rules
+    ...reactX.configs['recommended-typescript'].rules,
+    ...reactDom.configs.recommended.rules,
+  },
+})
+```
